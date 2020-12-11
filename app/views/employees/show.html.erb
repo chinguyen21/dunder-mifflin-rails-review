@@ -1,0 +1,11 @@
+<h1><%= @employee.to_s %></h1>
+<ul>
+
+  <li>Dog: <%= @employee.dog.name %></li><br>
+  <li>Title: <%= @employee.title %></li><br>
+  <li>Alias: <%= @employee.alias %></li><br>
+  <li>Office: <%= @employee.office %></li><br>
+  <li>My profile picture: </li><br>
+  <img src = '<%= @employee.img_url %>' alt = "Missing photo" title = "<%= @employee.first_name%>" >
+
+</ul>

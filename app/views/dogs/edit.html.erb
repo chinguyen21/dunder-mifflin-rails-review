@@ -1,0 +1,14 @@
+
+<h1>Dog Form</h1>
+<%= form_for(@dog) do |f| %>
+  <label>First name:</label><br>
+  <%= f.text_field :name %><br>
+
+  <label>Breed:</label><br>
+  <%= f.text_area :breed %><br>
+  
+  <label>Age:</label><br>
+  <%= f.text_area :age %><br>
+
+  <%= f.submit %>
+<% end %>

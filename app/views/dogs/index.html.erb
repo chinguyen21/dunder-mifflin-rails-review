@@ -1,0 +1,7 @@
+<h3> List of dogs by the number of employees that belong to them </h3>
+
+<% Dog.sort_dogs.each do |dog| %>
+  <div><%= link_to dog.name, dog_path(dog) %></div>
+<% end %>
+
+

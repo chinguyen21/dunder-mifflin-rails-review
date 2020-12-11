@@ -1,0 +1,36 @@
+
+<h1>Employee Form</h1>
+<%= form_for(@employee) do |f| %>
+   <% if @employee.errors.any? %>
+    <ul>
+    <% @employee.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
+
+  <label>First name:</label><br>
+  <%= f.text_field :first_name %><br>
+
+  <label>Last name:</label><br>
+  <%= f.text_area :last_name %><br>
+
+  <label>Alias:</label><br>
+  <%= f.text_area :alias %><br>
+
+  <label>Office:</label><br>
+  <%= f.text_area :office %><br>
+  
+  <label>Title:</label><br>
+  <%= f.text_area :title %><br>
+
+  <label>Dog_id:</label><br>
+  <%= f.collection_select :dog_id, Dog.all, :id, :name %><br>
+
+  <label>Images Link:</label><br>
+  <%= f.text_area :img_url %><br>
+
+
+  <%= f.submit %>
+<% end %>
